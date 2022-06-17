@@ -1,14 +1,14 @@
 package dao;
 
 import Model.Car;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Component
 public class CarDao {
-    private List <Car> listCar;
+    private List<Car> listCar;
 
     {
         listCar = new ArrayList<>();

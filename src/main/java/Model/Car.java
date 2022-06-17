@@ -1,12 +1,11 @@
 package Model;
 
-import org.springframework.context.annotation.ComponentScan;
-
 public class Car {
     private String color;
     private String model;
     private int series;
-    public Car(){
+
+    public Car() {
     }
 
     public Car(String model, int series, String color) {

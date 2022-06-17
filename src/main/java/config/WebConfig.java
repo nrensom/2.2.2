@@ -1,4 +1,4 @@
-package web.config;
+package config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +13,8 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("web")
+@ComponentScan("config")
+@ComponentScan("controller")
 @ComponentScan("dao")
 public class WebConfig implements WebMvcConfigurer {
 
