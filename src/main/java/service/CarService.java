@@ -1,17 +1,9 @@
 package service;
 
-import Model.Car;
+import models.Car;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
-public class CarService implements Service {
-
-    @Override
-    public List<Car> lstCar(List<Car> lstCar, int count) {
-        if (count == 0 || count > 5) {
-            return lstCar;
-        }
-        return lstCar.stream().limit(count).collect(Collectors.toList());
-    }
+public interface CarService {
+    List<Car> lstCar(List<Car> lstCar, int count);
 }
