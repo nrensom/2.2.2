@@ -16,17 +16,11 @@ import java.util.List;
 @RequestMapping("/cars")
 public class CarsController {
 
-    public CarService service = new CarServiceImpl();
+    private CarService service = new CarServiceImpl();
 
     @GetMapping()
     public String allCarList(@RequestParam(defaultValue = "5") int count, Model model) {
-        List<Car> listCar = new ArrayList<>();
-        listCar.add(new Car("Honda", 121, "pink"));
-        listCar.add(new Car("Honda", 122, "blue"));
-        listCar.add(new Car("Honda", 123, "red"));
-        listCar.add(new Car("Honda", 124, "yellow"));
-        listCar.add(new Car("Honda", 125, "bronze"));
-        model.addAttribute("cars", service.lstCar(listCar, count));
+        model.addAttribute("cars", service.lstCar(count));
         return "car";
     }
 
